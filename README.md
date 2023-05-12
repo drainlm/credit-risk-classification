@@ -1,48 +1,31 @@
 # credit-risk-classification ReadMe
 
+**Split the Data into Training and Testing Sets**
 
-### Instructions
+This script reads in the .csv file containing the lending data and then the y variable (labels) from "loan_status" column are separated from the X variable (features) from the remaining columns. And then checking the balance of the target values, which shows that there is an imbalance before the data is split into the training and testing datasets using train_test_split.
 
-    The instructions for this Challenge are divided into the following subsections:
+![1683858557498](image/README/1683858557498.png)
 
-    * Split the Data into Training and Testing Sets
+**Create a Logistic Regression Model with the Original Data**
 
-* Create a Logistic Regression Model with the Original Data
-* Predict a Logistic Regression Model with Resampled Training Data
-* Write a Credit Risk Analysis Report
+A logistic regression model with a random state of 1 is initiated and the training data is fit to the model. 
 
-  #### Split the Data into Training and Testing Sets
+![1683859224531](image/README/1683859224531.png)
 
-  Open the starter code notebook and use it to complete the following steps:
+The testing_predictions are then saved before evaluating the model's performance by using balanced_accuracy_score, confusion_matrix, and classificaton_report. 
 
+![1683859302377](image/README/1683859302377.png)
 
-  1. Read the `lending_data.csv` data from the Resources folder into a Pandas DataFrame.
+![1683859313361](image/README/1683859313361.png)
 
-1. Create the labels set (`y`) from the “loan_status” column, and then create the features (`X`) DataFrame from the remaining columns.
-   **note**
+![1683859323182](image/README/1683859323182.png)
 
-   A value of 0 in the “loan_status” column means that
-   the loan is healthy. A value of 1 means that the loan has a high risk of
-   defaulting.
-2. Split the data into training and testing datasets by using `train_test_split`.
+**Question:** How well does the logistic regression model predict both the `0` (healthy loan) and `1` (high-risk loan) labels?
 
-   #### Create a Logistic Regression Model with the Original Data
-
-   Use your knowledge of logistic regression to complete the following steps:
+**Answer:** Very well. Overall, the balanced accuracy score is 95.2% for both. The classification report provides an overall accuracy of 99%, largely due to healthy loan cases significantly outweighing the number of high-risk loans. There were 102 false positives for high-risk loans and 56 false negatives for healthy loans.
 
 
-   1. Fit a logistic regression model by using the training data (`X_train` and `y_train`).
-3. Save the predictions for the testing data labels by using the testing feature data (`X_test`) and the fitted model.
-4. Evaluate the model’s performance by doing the following:
-
-   * Calculate the accuracy score of the model.
-   * Generate a confusion matrix.
-   * Print the classification report.
-5. Answer the following question: How well does the logistic
-   regression model predict both the 0 (healthy loan) and 1 (high-risk
-   loan) labels?
-
-   #### Write a Credit Risk Analysis Report
+1. #### Write a Credit Risk Analysis Report
 
    Write a brief report that includes a summary and analysis of the
    performance of the machine learning models that you used in this
@@ -52,8 +35,8 @@
 
 
    1. **An overview of the analysis:** Explain the purpose of this analysis.
-6. **The results:** Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
-7. **A summary:** Summarize the results from
+5. **The results:** Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
+6. **A summary:** Summarize the results from
    the machine learning model. Include your justification for recommending
    the model for use by the company. If you don’t recommend the model,
    justify your reasoning.
