@@ -8,11 +8,11 @@ This script reads in the .csv file containing the lending data and then the y va
 
 **Create a Logistic Regression Model with the Original Data**
 
-A logistic regression model with a random state of 1 is initiated and the training data is fit to the model. 
+A logistic regression model with a random state of 1 is initiated and the training data is fit to the model.
 
 ![1683859224531](image/README/1683859224531.png)
 
-The testing_predictions are then saved before evaluating the model's performance by using balanced_accuracy_score, confusion_matrix, and classificaton_report. 
+The testing_predictions are then saved before evaluating the model's performance by using balanced_accuracy_score, confusion_matrix, and classificaton_report.
 
 ![1683859302377](image/README/1683859302377.png)
 
@@ -24,7 +24,6 @@ The testing_predictions are then saved before evaluating the model's performance
 
 **Answer:** Very well. Overall, the balanced accuracy score is 95.2% for both. The classification report provides an overall accuracy of 99%, largely due to healthy loan cases significantly outweighing the number of high-risk loans. There were 102 false positives for high-risk loans and 56 false negatives for healthy loans.
 
-
 1. #### Write a Credit Risk Analysis Report
 
    Write a brief report that includes a summary and analysis of the
@@ -35,8 +34,8 @@ The testing_predictions are then saved before evaluating the model's performance
 
 
    1. **An overview of the analysis:** Explain the purpose of this analysis.
-5. **The results:** Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
-6. **A summary:** Summarize the results from
+2. **The results:** Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
+3. **A summary:** Summarize the results from
    the machine learning model. Include your justification for recommending
    the model for use by the company. If you don’t recommend the model,
    justify your reasoning.
